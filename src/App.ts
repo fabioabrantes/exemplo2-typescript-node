@@ -13,16 +13,16 @@ class App {
     this.routes()
   }
 
-  private middlewares ():void{
+  private middlewares ():void {
     this.express.use(express.json())
     this.express.use(cors())
   }
 
-  private database (): void{
+  private database (): void {
     mongoose.connect('mongodb://192.168.99.100:27017/nodeapi', { useNewUrlParser: true })
   }
 
-  private routes ():void{
+  private routes ():void {
     this.express.use(routes)
   }
 }
